@@ -3,7 +3,7 @@ name: Start
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 22 * * *'  # 每天UTC时间22:30，即北京时间6:30
+    - cron: '0 16 * * *'  # 每天UTC时间22:30，即北京时间6:30
 
 jobs:
   TiebaSignIn:
