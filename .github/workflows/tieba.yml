@@ -1,6 +1,6 @@
 # 每天6:30执行
 # UTC 时间，北京时间需要 UTC+8
-name: Start
+name: 贴吧自动签到
 
 on:
    workflow_dispatch:
@@ -44,5 +44,4 @@ jobs:
         git config user.email "tieba-bot@yybf.com"
         git add last_run.txt
         git commit -m "Update last_run.txt with current date and time [skip ci]" || true  # 如果没有变化则不提交
-        git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git master    # 使用GITHUB_TOKEN进行认证 
-                                                                                                  # 假设主分支是main，如果不是，请改为相应的分支名
+        
