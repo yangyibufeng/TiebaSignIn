@@ -37,11 +37,4 @@ jobs:
       run: |
         mvn compile exec:java -Dexec.mainClass="top.srcrs.Run" -Dexec.args="${BDUSS} ${SCKEY}"
    
-    - name: Update last_run.txt
-      run: |
-        echo "Last run at $(date +'%Y-%m-%d %H:%M:%S')" >> last_run.txt
-        git config user.name "贴吧每日签到小助手"
-        git config user.email "tieba-bot@yybf.com"
-        git add last_run.txt
-        git commit -m "Update last_run.txt with current date and time [skip ci]" || true  # 如果没有变化则不提交
-        
+   
