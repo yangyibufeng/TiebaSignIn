@@ -1,4 +1,4 @@
-name: 提交文件  # 为了避免项目长时间不更新导致工作流失效
+name: 提交文件  # 避免项目长时间不更新导致工作流失效
 
 on:
   workflow_dispatch:
@@ -30,7 +30,7 @@ jobs:
 
     - name: Update last_run.txt
       run: |
-        echo "Last run at $(date +'%Y-%m-%d %H:%M:%S')" >> last_run.txt
+        echo "Last run at $(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M:%S')" >> last_run.txt
         git config user.name "贴吧每日签到小助手"
         git config user.email "tieba-bot@example.com"  # 使用自定义的邮箱地址
         git add last_run.txt
