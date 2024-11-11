@@ -31,8 +31,8 @@ jobs:
     - name: Update last_run.txt
       run: |
         echo "Last run at $(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M:%S')" >> last_run.txt
-        git config user.name "贴吧每日签到小助手"
-        git config user.email "tieba-bot@example.com"  # 使用自定义的邮箱地址
+        git config user.name "yangyibufeng"
+        git config user.email "1134456853@qq.com"  # 使用自定义的邮箱地址
         git add last_run.txt
         git commit -m "Update last_run.txt with current date and time [skip ci]" || true  # 如果没有变化则不提交
         git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git master  # 使用GITHUB_TOKEN进行认证
